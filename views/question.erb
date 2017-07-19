@@ -1,0 +1,23 @@
+<h1>Answers</h1>
+
+<h1><%= @question.question() %></h1>
+
+  <% if @question.answers().any?() %>
+    <h3>Here are all the answers for this question:</h3>
+
+    <ul>
+      <% @question.answers().each() do |answer| %>
+        <li><%= answer.answer() %> </li>
+      <% end %>
+    </ul>
+
+    <% else %>
+      <p>There are no answers for this question!</p>
+    <% end %>
+
+  <div class="container">
+    <a href="/"><button class="btn">Home</a>
+  </div>
+
+<p><a href="/questions/<%= @question.id() %>/edit">Edit<%= @question.question() %>question</a></p>
+<p><a href="/">Return to Main Page</a></p>

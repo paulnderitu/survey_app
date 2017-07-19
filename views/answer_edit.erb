@@ -1,0 +1,9 @@
+<h1>Update <%=@answer.answer() %> </h1>
+
+  <form action="/answers/<%= @answer.id() %>" method="post">
+    <input answer="_method" type="hidden" value="patch">
+    <label for="answer">Edit your answer:</label>
+    <input id="answer" name="answer" type="text">
+
+    <button type="submit">Update</button>
+  </form>

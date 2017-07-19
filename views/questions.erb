@@ -1,0 +1,16 @@
+<h1>Your Current Questions</h1>
+
+  <% if @questions.any?() %>
+    <h3>Here are your questions:</h3>
+
+    <ul>
+      <% @questions.each() do |list| %>
+        <li><a href="/questions/<%= question.id()%>"><%= question.name() %></a> </li>
+      <% end %>
+    </ul>
+
+  <% else %>
+
+      <p>There are no questions yet!</p>
+
+  <% end %>
